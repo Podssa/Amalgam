@@ -36,14 +36,14 @@ MAKE_HOOK(CL_ProcessPacketEntities, S::CL_ProcessPacketEntities(), bool, __fastc
 	CTFPlayer* pLocal = I::ClientEntityList->GetClientEntity(I::EngineClient->GetLocalPlayer())->As<CTFPlayer>();
 	if (!pLocal)
 	{
-		SDK::Output("ProcessPacketEntities", "Failed to restore weapon crit data! (1)", { 255, 100, 100, 255 }, Vars::Debug::Logging.Value);
+		SDK::Output("ProcessPacketEntities", "Failed to restore weapon crit data! (1)", { 255, 255, 255, 255 }, Vars::Debug::Logging.Value);
 		return CALL_ORIGINAL(entmsg);
 	}
 
 	auto hWeapons = pLocal->GetMyWeapons();
 	if (!hWeapons)
 	{
-		SDK::Output("ProcessPacketEntities", "Failed to restore weapon crit data! (2)", { 255, 100, 100, 255 }, Vars::Debug::Logging.Value);
+		SDK::Output("ProcessPacketEntities", "Failed to restore weapon crit data! (2)", { 255, 255, 255, 255 }, Vars::Debug::Logging.Value);
 		return CALL_ORIGINAL(entmsg);
 	}
 
@@ -70,14 +70,14 @@ MAKE_HOOK(CL_ProcessPacketEntities, S::CL_ProcessPacketEntities(), bool, __fastc
 	pLocal = I::ClientEntityList->GetClientEntity(I::EngineClient->GetLocalPlayer())->As<CTFPlayer>();
 	if (!pLocal)
 	{
-		SDK::Output("ProcessPacketEntities", "Failed to restore weapon crit data! (3)", { 255, 100, 100, 255 }, Vars::Debug::Logging.Value);
+		SDK::Output("ProcessPacketEntities", "Failed to restore weapon crit data! (3)", { 255, 255, 255, 255 }, Vars::Debug::Logging.Value);
 		return bReturn;
 	}
 
 	hWeapons = pLocal->GetMyWeapons();
 	if (!hWeapons)
 	{
-		SDK::Output("ProcessPacketEntities", "Failed to restore weapon crit data! (4)", { 255, 100, 100, 255 }, Vars::Debug::Logging.Value);
+		SDK::Output("ProcessPacketEntities", "Failed to restore weapon crit data! (4)", { 255, 255, 255, 255 }, Vars::Debug::Logging.Value);
 		return bReturn;
 	}
 

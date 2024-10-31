@@ -155,14 +155,14 @@ namespace Vars
 			CVar(SplashRadius, 90.f)
 			CVar(AutoRelease, 0.f)
 
-			CVar(GroundSamples, 33, NOSAVE) // debug
+			CVar(GroundSamples, 15, NOSAVE) // debug
 			CVar(GroundStraightFuzzyValue, 100.f, NOSAVE) // debug
 			CVar(GroundLowMinimumSamples, 8, NOSAVE) // debug
 			CVar(GroundHighMinimumSamples, 16, NOSAVE) // debug
 			CVar(GroundLowMinimumDistance, 0.f, NOSAVE) // debug
 			CVar(GroundHighMinimumDistance, 2500.f, NOSAVE) // debug
 
-			CVar(AirSamples, 33, NOSAVE) // debug
+			CVar(AirSamples, 15, NOSAVE) // debug
 			CVar(AirStraightFuzzyValue, 10.f, NOSAVE) // debug
 			CVar(AirLowMinimumSamples, 3, NOSAVE) // debug
 			CVar(AirHighMinimumSamples, 3, NOSAVE) // debug
@@ -177,10 +177,10 @@ namespace Vars
 			CVar(TimeOverride, 0.f, NOSAVE) // debug
 			CVar(HuntsmanLerp, 100.f, NOSAVE) // debug
 			CVar(SplashGrates, true, NOSAVE) // debug
-			CVar(SplashRocket, false, NOSAVE) // debug
-			CVar(SplashPoints, 100, NOSAVE) // debug
+			CVar(SplashRocket, true, NOSAVE) // debug
+			CVar(SplashPoints, 400, NOSAVE) // debug
 			CVar(SplashCountDirect, 100, NOSAVE) // debug
-			CVar(SplashCountArc, 5, NOSAVE) // debug
+			CVar(SplashCountArc, 100, NOSAVE) // debug
 			CVar(DeltaCount, 5, NOSAVE) // debug
 			CVarEnum(DeltaMode, 0, NOSAVE, Average, Max) // debug
 		SUBNAMESPACE_END(Projectile)

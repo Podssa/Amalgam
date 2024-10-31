@@ -199,7 +199,7 @@ void CPlayerlistCore::LoadTags()
 			F::PlayerUtils.m_vTags = {
 				{ "Default", { 200, 200, 200, 255 }, 0, false, false, true },
 				{ "Ignored", { 200, 200, 200, 255 }, -1, false, true, true },
-				{ "Cheater", { 255, 100, 100, 255 }, 1, false, true, true },
+				{ "Cheater", { 255, 255, 255, 255 }, 1, false, true, true },
 				{ "Friend", { 100, 255, 100, 255 }, 0, true, false, true }
 			};
 
