@@ -79,7 +79,7 @@ void CESP::StorePlayers(CTFPlayer* pLocal)
 			if (Vars::ESP::Player.Value & Vars::ESP::PlayerEnum::Priority)
 			{
 				if (auto pTag = F::PlayerUtils.GetSignificantTag(pi.friendsID, 1)) // 50 alpha as white outline tends to be more apparent
-					tCache.m_vText.push_back({ TextTop, pTag->Name, pTag->Color, H::Draw.IsColorDark(pTag->Color) ? Color_t(255, 255, 255, 50) : Color_t(0, 0, 0, 255) });
+					tCache.m_vText.push_back({ TextTop, pTag->Name, pTag->Color, H::Draw.IsColorDark(pTag->Color) ? Color_t(255, 255, 255, 255) : Color_t(0, 0, 0, 255) });
 			}
 
 			if (Vars::ESP::Player.Value & Vars::ESP::PlayerEnum::Labels)
@@ -110,7 +110,7 @@ void CESP::StorePlayers(CTFPlayer* pLocal)
 						});
 
 					for (auto& pTag : vTags) // 50 alpha as white outline tends to be more apparent
-						tCache.m_vText.push_back({ TextRight, pTag->Name, pTag->Color, H::Draw.IsColorDark(pTag->Color) ? Color_t(255, 255, 255, 50) : Color_t(0, 0, 0, 255) });
+						tCache.m_vText.push_back({ TextRight, pTag->Name, pTag->Color, H::Draw.IsColorDark(pTag->Color) ? Color_t(255, 255, 255, 255) : Color_t(0, 0, 0, 255) });
 				}
 			}
 		}
@@ -264,11 +264,11 @@ void CESP::StorePlayers(CTFPlayer* pLocal)
 					tCache.m_vText.push_back({ TextRight, "FIRE", { 255, 255, 255, 255 }, { 0, 0, 0, 255 } });
 
 				if (pPlayer->InCond(TF_COND_OFFENSEBUFF))
-					tCache.m_vText.push_back({ TextRight, "BANNER", tCache.m_tColor, { 0, 0, 0, 255 } });
+					tCache.m_vText.push_back({ TextRight, "BANNER", { 255, 255, 255, 255 }, { 0, 0, 0, 255 } });
 				if (pPlayer->InCond(TF_COND_DEFENSEBUFF))
-					tCache.m_vText.push_back({ TextRight, "BATTALIONS", tCache.m_tColor, { 0, 0, 0, 255 } });
+					tCache.m_vText.push_back({ TextRight, "BATTALIONS", { 255, 255, 255, 255 }, { 0, 0, 0, 255 } });
 				if (pPlayer->InCond(TF_COND_REGENONDAMAGEBUFF))
-					tCache.m_vText.push_back({ TextRight, "CONCH", tCache.m_tColor, { 0, 0, 0, 255 } });
+					tCache.m_vText.push_back({ TextRight, "CONCH", { 255, 255, 255, 255 }, { 0, 0, 0, 255 } });
 
 				if (pPlayer->InCond(TF_COND_BLASTJUMPING))
 					tCache.m_vText.push_back({ TextRight, "BLASTJUMP", { 255, 255, 255, 255 }, { 0, 0, 0, 255 } });
@@ -805,7 +805,7 @@ void CESP::DrawPlayers()
 			else
 			{
 				Color_t cColor = Vars::Colors::HealthBar.Value.StartColor.Lerp(Vars::Colors::HealthBar.Value.EndColor, tCache.m_flHealth);
-				H::Draw.FillRectPercent(x - 6, y, 2, h, tCache.m_flHealth, cColor, { 0, 0, 0, 255 }, ALIGN_BOTTOM, true);
+				H::Draw.FillRectPercent(x - 6, y, 2, h, tCache.m_flHealth, cColor, { 0, 0, 0, 0 }, ALIGN_BOTTOM, true);
 			}
 			lOffset += 5;
 		}
@@ -880,7 +880,7 @@ void CESP::DrawBuildings()
 		if (tCache.m_bHealthBar)
 		{
 			Color_t cColor = Vars::Colors::HealthBar.Value.StartColor.Lerp(Vars::Colors::HealthBar.Value.EndColor, tCache.m_flHealth);
-			H::Draw.FillRectPercent(x - 6, y, 2, h, tCache.m_flHealth, cColor, { 0, 0, 0, 255 }, ALIGN_BOTTOM, true);
+			H::Draw.FillRectPercent(x - 6, y, 2, h, tCache.m_flHealth, cColor, { 0, 0, 0, 0 }, ALIGN_BOTTOM, true);
 			lOffset += 5;
 		}
 
