@@ -102,7 +102,7 @@ void CCore::Unload()
 {
 	if (m_bFailed)
 	{
-		ssFailStream << "\nBuilt @ " __DATE__ ", " __TIME__ " (1)\n";
+		ssFailStream << "\n" __CONFIGURATION__ " @ " __DATE__ ", " __TIME__ " (1)\n";
 		ssFailStream << "Ctrl + C to copy. \n";
 		try
 		{
@@ -143,7 +143,7 @@ void CCore::Unload()
 
 	if (m_bFailed2)
 	{
-		ssFailStream << "\nBuilt @ " __DATE__ ", " __TIME__ " (2)\n";
+		ssFailStream << "\n" __CONFIGURATION__ " @ " __DATE__ ", " __TIME__ " (2)\n";
 		ssFailStream << "Ctrl + C to copy. \n";
 		try
 		{
